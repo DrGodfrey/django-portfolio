@@ -1,1 +1,18 @@
-Datetime now = {{datetime_now}}
+<form action="/views/" method="GET">
+    <label for="sampleg">TYPE: mass of sample (in grams)\n     =</label>
+    <input type="text" id="sampleg" name="sampleg"><br><br>
+    <label for="silica">TYPE: number times silica do you want to use?\n (10-50x depending on seperation)\n     x</label>
+    <input type="text" id="silica" name="silica"><br><br>
+    <label for="rf">TYPE: Rf of compound (if known)\n ---> otherwise type: 0\n     =</label>
+    <input type="text" id="rf" name="rf"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+
+OUTPUT ---
+</br>
+  {{sample_g}} - {{times_silica}} - {{rf}}
+
+{% for item in listy %}
+    </br>
+    {{item}}
+{% endfor %}
